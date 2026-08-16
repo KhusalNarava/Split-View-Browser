@@ -205,7 +205,7 @@ export default function App() {
   );
 }
 
-function BrowserPanel({ initialUrl, darkMode, isActive = true, onTitleChange }: { initialUrl: string, darkMode: boolean, isActive?: boolean, onTitleChange?: (title: string) => void }) {
+function BrowserPanel({ initialUrl, darkMode, isActive = true, onTitleChange }: { initialUrl: string, darkMode: boolean, isActive?: boolean, onTitleChange?: (title: string) => void, key?: React.Key }) {
   const [inputUrl, setInputUrl] = useState(initialUrl);
   const [history, setHistory] = useState<string[]>([initialUrl]);
   const [historyIndex, setHistoryIndex] = useState(0);
