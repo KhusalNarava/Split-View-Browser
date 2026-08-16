@@ -662,7 +662,7 @@ function BrowserPanel({ initialUrl, darkMode, isActive = true, onTitleChange }: 
               src={proxiedUrl}
               onLoad={() => setIsLoading(false)}
               className={`absolute inset-0 w-full h-full border-none bg-white transition-all duration-300 ${invertPage ? 'invert hue-rotate-180' : ''}`}
-              sandbox="allow-scripts allow-popups allow-forms allow-storage-access-by-user-activation allow-downloads"
+              sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-storage-access-by-user-activation allow-downloads"
               title="Browser Panel"
             />
           ) : (
