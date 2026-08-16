@@ -1,0 +1,6 @@
+{
+  "name": "Split View Browser",
+  "description": "A split-screen browser utility that lets you view two websites side-by-side using iframes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
