@@ -67,6 +67,11 @@ async function startServer() {
         <base href="${baseUrl}/">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
         <script>
+          try {
+            window.history.replaceState(null, '', '${urlObj.pathname}${urlObj.search}');
+          } catch (e) {
+            console.error('History replace failed', e);
+          }
           window.addEventListener('message', async (e) => {
             if (!e.data) return;
             if (e.data.type === 'FIND') {
